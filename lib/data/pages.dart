@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:senior_shabeb/pages/Explore/explore.dart';
+import 'package:senior_shabeb/pages/lobies/lobies.dart';
 
 final menu = [
   {
@@ -13,7 +14,7 @@ final menu = [
   },
   {
     'icon': Iconsax.book_square,
-    'destination': const Center(child: Text('Booking')),
+    'destination': const Lobies(),
   },
   {
     'icon': Iconsax.notification,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senior_shabeb/pages/Explore/explore_appBar.dart';
 import 'package:senior_shabeb/pages/Explore/explore_item.dart';
+import 'package:senior_shabeb/pages/book/book_venue.dart';
 
 class Explore extends StatefulWidget {
   const Explore({super.key});
@@ -40,12 +41,19 @@ class _ExploreState extends State<Explore> {
             padding: const EdgeInsets.all(20),
             itemCount: exploreData.length,
             itemBuilder: (context, index) {
-              return ExploreItem(
-                imagesName: exploreData[index]["images"],
-                title: exploreData[index]["title"],
-                rating: exploreData[index]["rating"],
-                distance: exploreData[index]["distance"],
-                price: exploreData[index]["price"],
+              return InkWell(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) =>
+                          BookVenue(data: exploreData[index])));
+                },
+                child: ExploreItem(
+                  imagesName: exploreData[index]["images"] ?? '',
+                  title: exploreData[index]["title"] ?? '',
+                  rating: exploreData[index]["rating"] ?? '',
+                  distance: exploreData[index]["distance"] ?? '',
+                  price: exploreData[index]["price"] ?? '',
+                ),
               );
             },
           ),

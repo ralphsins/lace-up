@@ -16,16 +16,24 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   int indexMenu = 0;
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const LoginPage(),
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: AppColors.primary),
+        // appBarTheme: const AppBarTheme(),
+        primaryColor: AppColors.primary,
+        colorScheme: const ColorScheme.light(
+          primary: AppColors.primary,
+          secondary: AppColors.accent,
+        ),
+        buttonTheme: const ButtonThemeData(
+          buttonColor: AppColors.primary, // Default button color
+          textTheme: ButtonTextTheme.primary, // Button text color
+        ),
       ),
       routes: {
         "home": (context) => const HomePage(),
