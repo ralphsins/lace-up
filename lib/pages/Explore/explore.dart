@@ -15,7 +15,7 @@ class _ExploreState extends State<Explore> {
 
   List<Map<String, dynamic>> exploreData = [
     {
-      "images": ["test.jpg", "test.jpg", "img.jpeg", "img.jpeg"],
+      "images": ["futsal.png", "futsal.png", "img.jpeg", "img.jpeg"],
       "title": "Go Futsal, Dam w Farez",
       "rating": 4.94,
       "distance": "3 Kilometers away",
@@ -23,7 +23,7 @@ class _ExploreState extends State<Explore> {
     },
     // Add more data entries here
     {
-      "images": ["test.jpg", "test.jpg", "img.jpeg", "img.jpeg"],
+      "images": ["futsal.png", "futsal.png", "img.jpeg", "img.jpeg"],
       "title": "Soccer Field, Beirut",
       "rating": 4.8,
       "distance": "5 Kilometers away",
