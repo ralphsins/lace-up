@@ -100,7 +100,7 @@ class LobbyCard extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 15),
           child: Text(
             host,
-            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+            style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
           ),
         ),
       ],

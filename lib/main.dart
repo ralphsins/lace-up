@@ -31,16 +31,13 @@ class _MyAppState extends State<MyApp> {
           secondary: AppColors.accent,
         ),
         buttonTheme: const ButtonThemeData(
-          buttonColor: AppColors.primary, // Default button color
-          textTheme: ButtonTextTheme.primary, // Button text color
+          buttonColor: AppColors.primary,
+          textTheme: ButtonTextTheme.primary,
         ),
       ),
       routes: {
         "home": (context) => const HomePage(),
         "explore": (context) => const Explore(),
-        // "about": (context) => const AboutUs(),
-        // "page1": (context) => const Pageone(),
-        // "page2": (context) => const Pagetwo(),
       },
     );
   }

@@ -1,8 +1,8 @@
 import 'package:drop_down_list/model/selected_list_item.dart';
 import 'package:flutter/material.dart';
-import 'package:senior_shabeb/pages/widgets/AppTextField.dart';
-import 'package:senior_shabeb/pages/widgets/common_button.dart';
-import 'package:senior_shabeb/pages/widgets/continueWith_button.dart';
+import 'package:senior_shabeb/widgets/AppTextField.dart';
+import 'package:senior_shabeb/widgets/common_button.dart';
+import 'package:senior_shabeb/widgets/continueWith_button.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
