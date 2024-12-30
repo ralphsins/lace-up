@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
           ContinueWithButton(
             onTab: () {},
             title: "Continue with Google",
-            icon: const Icon(Icons.abc),
+            icon: const Icon(Icons.g_mobiledata),
           ),
           const SizedBox(
             height: 15,
