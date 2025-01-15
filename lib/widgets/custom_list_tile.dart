@@ -5,6 +5,7 @@ class CustomListTile extends StatelessWidget {
   final String subtitle;
   final bool hasEditOption;
   final VoidCallback? onEditTap;
+  final Widget? trailing; // New trailing parameter
 
   const CustomListTile({
     super.key,
@@ -12,6 +13,7 @@ class CustomListTile extends StatelessWidget {
     required this.subtitle,
     this.hasEditOption = false,
     this.onEditTap,
+    this.trailing, // Allow custom trailing widget
   });
 
   @override
@@ -37,7 +39,7 @@ class CustomListTile extends StatelessWidget {
                 ),
               ),
             )
-          : null,
+          : trailing, 
     );
   }
 }
