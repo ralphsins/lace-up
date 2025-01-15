@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senior_shabeb/colors/colors.dart';
+import 'package:senior_shabeb/pages/venue/map/map_page.dart';
 import 'package:senior_shabeb/pages/venue/sports/sports_page.dart';
 
 class VenuePage extends StatefulWidget {
@@ -16,13 +17,13 @@ class _VenuePageState extends State<VenuePage> {
 
   // List to hold the form pages (replace with your actual pages)
   final List<Map<String, dynamic>> menu = [
-    {'icon': Icons.home, 'destination': const Placeholder(), 'title': 'Step 1'},
-    {'icon': Icons.settings, 'destination': Container(), 'title': 'Step 2'},
-    {'icon': Icons.star, 'destination': Container(), 'title': 'Step 3'},
-    {'icon': Icons.contact_page, 'destination': Container(), 'title': 'Step 4'},
-    {'icon': Icons.person, 'destination': Container(), 'title': 'Step 5'},
-    {'icon': Icons.info, 'destination': Container(), 'title': 'Step 6'},
-    {'icon': Icons.done, 'destination': Container(), 'title': 'Step 7'},
+    {'destination': const Placeholder(), 'title': 'Step 1'},
+    {'destination': const MapPage(), 'title': 'Step 2'},
+    {'destination': Container(), 'title': 'Step 3'},
+    {'destination': Container(), 'title': 'Step 4'},
+    {'destination': Container(), 'title': 'Step 5'},
+    {'destination': Container(), 'title': 'Step 6'},
+    {'destination': Container(), 'title': 'Step 7'},
   ];
 
   void nextPage() {
@@ -64,11 +65,9 @@ class _VenuePageState extends State<VenuePage> {
       appBar: AppBar(
         title: Text(menu[indexMenu]['title']),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: menu[indexMenu]['destination']
-            as Widget, // Show current page content
-      ),
+      body:
+          menu[indexMenu]['destination'] as Widget, // Show current page content
+
       bottomNavigationBar: Column(
         mainAxisSize: MainAxisSize.min,
         children: [

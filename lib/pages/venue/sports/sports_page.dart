@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class SportsPage extends StatefulWidget {
   final List<int> selectedIndices;
-  final Function(int) onSelectSport; 
+  final Function(int) onSelectSport;
 
   const SportsPage({
     super.key,
@@ -27,7 +27,7 @@ class _SportsPageState extends State<SportsPage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

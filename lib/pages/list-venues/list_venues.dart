@@ -22,7 +22,7 @@ class _ListVenuesState extends State<ListVenues> {
         child: CommonButton(
             onTab: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => VenuePage()));
+                  .push(MaterialPageRoute(builder: (context) => const VenuePage()));
             },
             title: "Get Started"),
       ),
