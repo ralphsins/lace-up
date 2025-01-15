@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:senior_shabeb/pages/notifications/notification_tab.dart';
+import 'package:senior_shabeb/pages/inbox/inbox_tab.dart';
 
-class NotificationsPage extends StatefulWidget {
-  const NotificationsPage({super.key});
+class InboxPage extends StatefulWidget {
+  const InboxPage({super.key});
 
   @override
-  State<NotificationsPage> createState() => _NotificationsPageState();
+  State<InboxPage> createState() => _InboxPageState();
 }
 
-class _NotificationsPageState extends State<NotificationsPage> {
+class _InboxPageState extends State<InboxPage> {
   final List<Map<String, String>> notifications = [
     {
       "name": "Ahmad El Sayed",
@@ -96,7 +96,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
             child: ListView.builder(
               itemCount: notifications.length,
               itemBuilder: (context, index) {
-                return NotificationTab(data: notifications[index]);
+                return InboxTab(data: notifications[index]);
               },
             ),
           ),

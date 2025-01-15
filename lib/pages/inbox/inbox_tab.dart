@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class NotificationTab extends StatelessWidget {
+class InboxTab extends StatelessWidget {
   final Map<String, String> data;
 
-  const NotificationTab({super.key, required this.data});
+  const InboxTab({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
