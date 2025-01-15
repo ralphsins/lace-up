@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:senior_shabeb/colors/colors.dart';
 import 'package:senior_shabeb/pages/venue/address-confirmation/address_confirmation.dart';
+import 'package:senior_shabeb/pages/venue/basics-venue/venue_basics.dart';
 import 'package:senior_shabeb/pages/venue/map/map_page.dart';
 import 'package:senior_shabeb/pages/venue/sports/sports_page.dart';
 
@@ -21,7 +22,7 @@ class _VenuePageState extends State<VenuePage> {
     {'destination': const Placeholder(), 'title': 'Step 1'},
     {'destination': const MapPage(), 'title': 'Step 2'},
     {'destination': const AddressConfirmation(), 'title': 'Step 3'},
-    {'destination': Container(), 'title': 'Step 4'},
+    {'destination': const VenueBasics(), 'title': 'Step 4'},
     {'destination': Container(), 'title': 'Step 5'},
     {'destination': Container(), 'title': 'Step 6'},
     {'destination': Container(), 'title': 'Step 7'},
