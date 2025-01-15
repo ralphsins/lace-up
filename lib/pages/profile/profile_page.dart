@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:senior_shabeb/pages/list-venues/list_venues.dart';
+import 'package:senior_shabeb/pages/notifications/notification_page.dart';
 import 'package:senior_shabeb/pages/personal-info/personal_information.dart';
 import 'package:senior_shabeb/pages/privacy-settings/privacy_settings.dart';
 
@@ -126,8 +127,8 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(height: 20),
               SettingsTile(
                 leadingIcon: Icons.notifications_outlined,
-                title: "Privacy Settings",
-                destination: PrivacySettings(),
+                title: "Notifications",
+                destination: NotificationPage(),
               ),
             ],
           ),

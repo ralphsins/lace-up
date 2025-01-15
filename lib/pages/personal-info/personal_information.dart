@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:senior_shabeb/widgets/custom_list_tile.dart';
 
 class PersonalInformation extends StatefulWidget {
   const PersonalInformation({super.key});
@@ -43,15 +44,15 @@ class _PersonalInformationState extends State<PersonalInformation> {
             child: ListView(
               padding: const EdgeInsets.all(10),
               children: [
-                const _CustomListTile(
+                const CustomListTile(
                   title: "Legal Name",
                   subtitle: "Sleiman El Ahmad",
                 ),
-                const _CustomListTile(
+                const CustomListTile(
                   title: "Gender",
                   subtitle: "Female",
                 ),
-                _CustomListTile(
+                CustomListTile(
                   title: "Email",
                   subtitle: email,
                   hasEditOption: true,
@@ -66,7 +67,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
                     },
                   ),
                 ),
-                _CustomListTile(
+                CustomListTile(
                   title: "Phone Number",
                   subtitle: phoneNumber,
                   hasEditOption: true,
@@ -81,7 +82,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
                     },
                   ),
                 ),
-                _CustomListTile(
+                CustomListTile(
                   title: "Address",
                   subtitle: address,
                   hasEditOption: true,
@@ -96,7 +97,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
                     },
                   ),
                 ),
-                _CustomListTile(
+                CustomListTile(
                   title: "Emergency Contact",
                   subtitle: emergencyContact,
                   hasEditOption: true,
@@ -111,7 +112,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
                     },
                   ),
                 ),
-                _CustomListTile(
+                CustomListTile(
                   title: "Personal ID",
                   subtitle: personalIdImage == null
                       ? "Upload Image"
@@ -159,47 +160,6 @@ class _PersonalInformationState extends State<PersonalInformation> {
           ],
         );
       },
-    );
-  }
-}
-
-class _CustomListTile extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final bool hasEditOption;
-  final VoidCallback? onEditTap;
-
-  const _CustomListTile({
-    required this.title,
-    required this.subtitle,
-    this.hasEditOption = false,
-    this.onEditTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        title,
-        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-      ),
-      subtitle: Text(
-        subtitle,
-        style: const TextStyle(fontWeight: FontWeight.w300),
-      ),
-      trailing: hasEditOption
-          ? InkWell(
-              onTap: onEditTap,
-              child: const Text(
-                "Edit",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-            )
-          : null,
     );
   }
 }
